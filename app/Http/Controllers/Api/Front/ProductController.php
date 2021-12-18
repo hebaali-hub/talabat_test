@@ -12,6 +12,7 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
 
+
 class ProductController extends Controller
 {
      use ResponseJson;

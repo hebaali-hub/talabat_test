@@ -4,7 +4,7 @@ use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Front\ProductController;
 
  use App\Http\Controllers\Api\Front\SectionController;
-// use App\Http\Controllers\Api\Front\HomeController;
+use App\Http\Controllers\Api\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/search', [HomeController::class, 'search_site'])->name('search');
+Route::post('/filter', [HomeController::class, 'filter'])->name('filter');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout']);
